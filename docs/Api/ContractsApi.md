@@ -1,4 +1,4 @@
-# Pakkasmarja\ContractsApi
+# Metatavu\Pakkasmarja\ContractsApi
 
 All URIs are relative to *https://localhost/rest/v1*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createContractDocumentSignRequest**
-> \Pakkasmarja\Pakkasmarja\Api\Model\ContractDocumentSignRequest createContractDocumentSignRequest($id, $type, $body)
+> \Metatavu\Pakkasmarja\Api\Model\ContractDocumentSignRequest createContractDocumentSignRequest($id, $type, $body)
 
 Requests contract document electronic signing
 
@@ -23,10 +23,10 @@ Requests contract document electronic signing
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Pakkasmarja\Api\ContractsApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Metatavu\Pakkasmarja\Api\ContractsApi(new \Http\Adapter\Guzzle6\Client());
 $id = "id_example"; // string | contract id
 $type = "type_example"; // string | document type
-$body = new \Pakkasmarja\Pakkasmarja\Api\Model\ContractDocumentSignRequest(); // \Pakkasmarja\Pakkasmarja\Api\Model\ContractDocumentSignRequest | Payload
+$body = new \Metatavu\Pakkasmarja\Api\Model\ContractDocumentSignRequest(); // \Metatavu\Pakkasmarja\Api\Model\ContractDocumentSignRequest | Payload
 
 try {
     $result = $api_instance->createContractDocumentSignRequest($id, $type, $body);
@@ -43,11 +43,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| contract id |
  **type** | **string**| document type |
- **body** | [**\Pakkasmarja\Pakkasmarja\Api\Model\ContractDocumentSignRequest**](../Model/ContractDocumentSignRequest.md)| Payload |
+ **body** | [**\Metatavu\Pakkasmarja\Api\Model\ContractDocumentSignRequest**](../Model/ContractDocumentSignRequest.md)| Payload |
 
 ### Return type
 
-[**\Pakkasmarja\Pakkasmarja\Api\Model\ContractDocumentSignRequest**](../Model/ContractDocumentSignRequest.md)
+[**\Metatavu\Pakkasmarja\Api\Model\ContractDocumentSignRequest**](../Model/ContractDocumentSignRequest.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findContract**
-> \Pakkasmarja\Pakkasmarja\Api\Model\Contract findContract($id, $accept)
+> \Metatavu\Pakkasmarja\Api\Model\Contract findContract($id, $accept)
 
 Find contract
 
@@ -72,7 +72,7 @@ Finds contract by id
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Pakkasmarja\Api\ContractsApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Metatavu\Pakkasmarja\Api\ContractsApi(new \Http\Adapter\Guzzle6\Client());
 $id = "id_example"; // string | contract id
 $accept = "accept_example"; // string | Expected response format. Accepted values application/json for JSON reponse (default) and application/vnd.openxmlformats-officedocument.spreadsheetml.sheet for Excel response
 
@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Pakkasmarja\Pakkasmarja\Api\Model\Contract**](../Model/Contract.md)
+[**\Metatavu\Pakkasmarja\Api\Model\Contract**](../Model/Contract.md)
 
 ### Authorization
 
@@ -119,7 +119,7 @@ Returns contract document by type
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Pakkasmarja\Api\ContractsApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Metatavu\Pakkasmarja\Api\ContractsApi(new \Http\Adapter\Guzzle6\Client());
 $id = "id_example"; // string | contract id
 $type = "type_example"; // string | document type
 $format = "format_example"; // string | document format (HTML or PDF)
@@ -157,7 +157,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listContracts**
-> \Pakkasmarja\Pakkasmarja\Api\Model\Contract[] listContracts($accept)
+> \Metatavu\Pakkasmarja\Api\Model\Contract[] listContracts($accept)
 
 Lists contracts
 
@@ -168,7 +168,7 @@ Lists contracts
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Pakkasmarja\Api\ContractsApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Metatavu\Pakkasmarja\Api\ContractsApi(new \Http\Adapter\Guzzle6\Client());
 $accept = "accept_example"; // string | Expected response format. Accepted values application/json for JSON reponse (default) and application/vnd.openxmlformats-officedocument.spreadsheetml.sheet for Excel response
 
 try {
@@ -188,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Pakkasmarja\Pakkasmarja\Api\Model\Contract[]**](../Model/Contract.md)
+[**\Metatavu\Pakkasmarja\Api\Model\Contract[]**](../Model/Contract.md)
 
 ### Authorization
 
@@ -202,7 +202,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateContract**
-> \Pakkasmarja\Pakkasmarja\Api\Model\Contract updateContract($id, $body)
+> \Metatavu\Pakkasmarja\Api\Model\Contract updateContract($id, $body)
 
 Update contract
 
@@ -213,9 +213,9 @@ Updates single contract
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Pakkasmarja\Api\ContractsApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Metatavu\Pakkasmarja\Api\ContractsApi(new \Http\Adapter\Guzzle6\Client());
 $id = "id_example"; // string | contract id
-$body = new \Pakkasmarja\Pakkasmarja\Api\Model\Contract(); // \Pakkasmarja\Pakkasmarja\Api\Model\Contract | Payload
+$body = new \Metatavu\Pakkasmarja\Api\Model\Contract(); // \Metatavu\Pakkasmarja\Api\Model\Contract | Payload
 
 try {
     $result = $api_instance->updateContract($id, $body);
@@ -231,11 +231,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| contract id |
- **body** | [**\Pakkasmarja\Pakkasmarja\Api\Model\Contract**](../Model/Contract.md)| Payload |
+ **body** | [**\Metatavu\Pakkasmarja\Api\Model\Contract**](../Model/Contract.md)| Payload |
 
 ### Return type
 
-[**\Pakkasmarja\Pakkasmarja\Api\Model\Contract**](../Model/Contract.md)
+[**\Metatavu\Pakkasmarja\Api\Model\Contract**](../Model/Contract.md)
 
 ### Authorization
 

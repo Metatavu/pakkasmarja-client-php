@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Pakkasmarja
+ * @package  Metatavu\Pakkasmarja
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,23 +25,23 @@
  * Do not edit the class manually.
  */
 
-namespace Pakkasmarja\Pakkasmarja\Api;
+namespace Metatavu\Pakkasmarja\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
-use Pakkasmarja\ApiException;
-use Pakkasmarja\Configuration;
-use Pakkasmarja\HeaderSelector;
-use Pakkasmarja\ObjectSerializer;
+use Metatavu\Pakkasmarja\ApiException;
+use Metatavu\Pakkasmarja\Configuration;
+use Metatavu\Pakkasmarja\HeaderSelector;
+use Metatavu\Pakkasmarja\ObjectSerializer;
 
 /**
  * OperationsApi Class Doc Comment
  *
  * @category Class
- * @package  Pakkasmarja
+ * @package  Metatavu\Pakkasmarja
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -85,11 +85,11 @@ class OperationsApi
      *
      * Creates new operation
      *
-     * @param  \Pakkasmarja\Pakkasmarja\Api\Model\Operation $body Payload (required)
+     * @param  \Metatavu\Pakkasmarja\Api\Model\Operation $body Payload (required)
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Pakkasmarja\Pakkasmarja\Api\Model\Operation
+     * @return \Metatavu\Pakkasmarja\Api\Model\Operation
      */
     public function createOperation($body)
     {
@@ -102,15 +102,15 @@ class OperationsApi
      *
      * Creates new operation
      *
-     * @param  \Pakkasmarja\Pakkasmarja\Api\Model\Operation $body Payload (required)
+     * @param  \Metatavu\Pakkasmarja\Api\Model\Operation $body Payload (required)
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Pakkasmarja\Pakkasmarja\Api\Model\Operation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Metatavu\Pakkasmarja\Api\Model\Operation, HTTP status code, HTTP response headers (array of strings)
      */
     public function createOperationWithHttpInfo($body)
     {
-        $returnType = '\Pakkasmarja\Pakkasmarja\Api\Model\Operation';
+        $returnType = '\Metatavu\Pakkasmarja\Api\Model\Operation';
         $request = $this->createOperationRequest($body);
 
         try {
@@ -161,7 +161,7 @@ class OperationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\Operation',
+                        '\Metatavu\Pakkasmarja\Api\Model\Operation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -169,7 +169,7 @@ class OperationsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\BadRequest',
+                        '\Metatavu\Pakkasmarja\Api\Model\BadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -177,7 +177,7 @@ class OperationsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\Forbidden',
+                        '\Metatavu\Pakkasmarja\Api\Model\Forbidden',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -185,7 +185,7 @@ class OperationsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\InternalServerError',
+                        '\Metatavu\Pakkasmarja\Api\Model\InternalServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -200,7 +200,7 @@ class OperationsApi
      *
      * Creates new operation
      *
-     * @param  \Pakkasmarja\Pakkasmarja\Api\Model\Operation $body Payload (required)
+     * @param  \Metatavu\Pakkasmarja\Api\Model\Operation $body Payload (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -220,14 +220,14 @@ class OperationsApi
      *
      * Creates new operation
      *
-     * @param  \Pakkasmarja\Pakkasmarja\Api\Model\Operation $body Payload (required)
+     * @param  \Metatavu\Pakkasmarja\Api\Model\Operation $body Payload (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createOperationAsyncWithHttpInfo($body)
     {
-        $returnType = '\Pakkasmarja\Pakkasmarja\Api\Model\Operation';
+        $returnType = '\Metatavu\Pakkasmarja\Api\Model\Operation';
         $request = $this->createOperationRequest($body);
 
         return $this->client
@@ -270,7 +270,7 @@ class OperationsApi
     /**
      * Create request for operation 'createOperation'
      *
-     * @param  \Pakkasmarja\Pakkasmarja\Api\Model\Operation $body Payload (required)
+     * @param  \Metatavu\Pakkasmarja\Api\Model\Operation $body Payload (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

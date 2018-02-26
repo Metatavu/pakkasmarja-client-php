@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Pakkasmarja
+ * @package  Metatavu\Pakkasmarja
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,23 +25,23 @@
  * Do not edit the class manually.
  */
 
-namespace Pakkasmarja\Pakkasmarja\Api;
+namespace Metatavu\Pakkasmarja\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
-use Pakkasmarja\ApiException;
-use Pakkasmarja\Configuration;
-use Pakkasmarja\HeaderSelector;
-use Pakkasmarja\ObjectSerializer;
+use Metatavu\Pakkasmarja\ApiException;
+use Metatavu\Pakkasmarja\Configuration;
+use Metatavu\Pakkasmarja\HeaderSelector;
+use Metatavu\Pakkasmarja\ObjectSerializer;
 
 /**
  * ItemGroupsApi Class Doc Comment
  *
  * @category Class
- * @package  Pakkasmarja
+ * @package  Metatavu\Pakkasmarja
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -87,9 +87,9 @@ class ItemGroupsApi
      *
      * @param  string $id item group id (required)
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Pakkasmarja\Pakkasmarja\Api\Model\ItemGroup
+     * @return \Metatavu\Pakkasmarja\Api\Model\ItemGroup
      */
     public function findItemGroup($id)
     {
@@ -104,13 +104,13 @@ class ItemGroupsApi
      *
      * @param  string $id item group id (required)
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Pakkasmarja\Pakkasmarja\Api\Model\ItemGroup, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Metatavu\Pakkasmarja\Api\Model\ItemGroup, HTTP status code, HTTP response headers (array of strings)
      */
     public function findItemGroupWithHttpInfo($id)
     {
-        $returnType = '\Pakkasmarja\Pakkasmarja\Api\Model\ItemGroup';
+        $returnType = '\Metatavu\Pakkasmarja\Api\Model\ItemGroup';
         $request = $this->findItemGroupRequest($id);
 
         try {
@@ -161,7 +161,7 @@ class ItemGroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\ItemGroup',
+                        '\Metatavu\Pakkasmarja\Api\Model\ItemGroup',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -169,7 +169,7 @@ class ItemGroupsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\BadRequest',
+                        '\Metatavu\Pakkasmarja\Api\Model\BadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -177,7 +177,7 @@ class ItemGroupsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\Forbidden',
+                        '\Metatavu\Pakkasmarja\Api\Model\Forbidden',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -185,7 +185,7 @@ class ItemGroupsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\InternalServerError',
+                        '\Metatavu\Pakkasmarja\Api\Model\InternalServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -227,7 +227,7 @@ class ItemGroupsApi
      */
     public function findItemGroupAsyncWithHttpInfo($id)
     {
-        $returnType = '\Pakkasmarja\Pakkasmarja\Api\Model\ItemGroup';
+        $returnType = '\Metatavu\Pakkasmarja\Api\Model\ItemGroup';
         $request = $this->findItemGroupRequest($id);
 
         return $this->client
@@ -367,9 +367,9 @@ class ItemGroupsApi
      * Lists itemGroups
      *
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Pakkasmarja\Pakkasmarja\Api\Model\ItemGroup[]
+     * @return \Metatavu\Pakkasmarja\Api\Model\ItemGroup[]
      */
     public function listItemGroups()
     {
@@ -383,13 +383,13 @@ class ItemGroupsApi
      * Lists itemGroups
      *
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Pakkasmarja\Pakkasmarja\Api\Model\ItemGroup[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Metatavu\Pakkasmarja\Api\Model\ItemGroup[], HTTP status code, HTTP response headers (array of strings)
      */
     public function listItemGroupsWithHttpInfo()
     {
-        $returnType = '\Pakkasmarja\Pakkasmarja\Api\Model\ItemGroup[]';
+        $returnType = '\Metatavu\Pakkasmarja\Api\Model\ItemGroup[]';
         $request = $this->listItemGroupsRequest();
 
         try {
@@ -440,7 +440,7 @@ class ItemGroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\ItemGroup[]',
+                        '\Metatavu\Pakkasmarja\Api\Model\ItemGroup[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -448,7 +448,7 @@ class ItemGroupsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\BadRequest',
+                        '\Metatavu\Pakkasmarja\Api\Model\BadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -456,7 +456,7 @@ class ItemGroupsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\Forbidden',
+                        '\Metatavu\Pakkasmarja\Api\Model\Forbidden',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -464,7 +464,7 @@ class ItemGroupsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\InternalServerError',
+                        '\Metatavu\Pakkasmarja\Api\Model\InternalServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -504,7 +504,7 @@ class ItemGroupsApi
      */
     public function listItemGroupsAsyncWithHttpInfo()
     {
-        $returnType = '\Pakkasmarja\Pakkasmarja\Api\Model\ItemGroup[]';
+        $returnType = '\Metatavu\Pakkasmarja\Api\Model\ItemGroup[]';
         $request = $this->listItemGroupsRequest();
 
         return $this->client

@@ -1,4 +1,4 @@
-# Pakkasmarja\ItemGroupsApi
+# Metatavu\Pakkasmarja\ItemGroupsApi
 
 All URIs are relative to *https://localhost/rest/v1*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **findItemGroup**
-> \Pakkasmarja\Pakkasmarja\Api\Model\ItemGroup findItemGroup($id)
+> \Metatavu\Pakkasmarja\Api\Model\ItemGroup findItemGroup($id)
 
 Find item group
 
@@ -20,7 +20,7 @@ Finds item group by id
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Pakkasmarja\Api\ItemGroupsApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Metatavu\Pakkasmarja\Api\ItemGroupsApi(new \Http\Adapter\Guzzle6\Client());
 $id = "id_example"; // string | item group id
 
 try {
@@ -40,7 +40,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Pakkasmarja\Pakkasmarja\Api\Model\ItemGroup**](../Model/ItemGroup.md)
+[**\Metatavu\Pakkasmarja\Api\Model\ItemGroup**](../Model/ItemGroup.md)
 
 ### Authorization
 
@@ -54,7 +54,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listItemGroups**
-> \Pakkasmarja\Pakkasmarja\Api\Model\ItemGroup[] listItemGroups()
+> \Metatavu\Pakkasmarja\Api\Model\ItemGroup[] listItemGroups()
 
 Lists itemGroups
 
@@ -65,7 +65,7 @@ Lists itemGroups
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Pakkasmarja\Api\ItemGroupsApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Metatavu\Pakkasmarja\Api\ItemGroupsApi(new \Http\Adapter\Guzzle6\Client());
 
 try {
     $result = $api_instance->listItemGroups();
@@ -81,7 +81,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Pakkasmarja\Pakkasmarja\Api\Model\ItemGroup[]**](../Model/ItemGroup.md)
+[**\Metatavu\Pakkasmarja\Api\Model\ItemGroup[]**](../Model/ItemGroup.md)
 
 ### Authorization
 

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Pakkasmarja
+ * @package  Metatavu\Pakkasmarja
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,23 +25,23 @@
  * Do not edit the class manually.
  */
 
-namespace Pakkasmarja\Pakkasmarja\Api;
+namespace Metatavu\Pakkasmarja\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
-use Pakkasmarja\ApiException;
-use Pakkasmarja\Configuration;
-use Pakkasmarja\HeaderSelector;
-use Pakkasmarja\ObjectSerializer;
+use Metatavu\Pakkasmarja\ApiException;
+use Metatavu\Pakkasmarja\Configuration;
+use Metatavu\Pakkasmarja\HeaderSelector;
+use Metatavu\Pakkasmarja\ObjectSerializer;
 
 /**
  * ContactsApi Class Doc Comment
  *
  * @category Class
- * @package  Pakkasmarja
+ * @package  Metatavu\Pakkasmarja
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -87,9 +87,9 @@ class ContactsApi
      *
      * @param  string $id contact id (required)
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Pakkasmarja\Pakkasmarja\Api\Model\Contact
+     * @return \Metatavu\Pakkasmarja\Api\Model\Contact
      */
     public function findContact($id)
     {
@@ -104,13 +104,13 @@ class ContactsApi
      *
      * @param  string $id contact id (required)
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Pakkasmarja\Pakkasmarja\Api\Model\Contact, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Metatavu\Pakkasmarja\Api\Model\Contact, HTTP status code, HTTP response headers (array of strings)
      */
     public function findContactWithHttpInfo($id)
     {
-        $returnType = '\Pakkasmarja\Pakkasmarja\Api\Model\Contact';
+        $returnType = '\Metatavu\Pakkasmarja\Api\Model\Contact';
         $request = $this->findContactRequest($id);
 
         try {
@@ -161,7 +161,7 @@ class ContactsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\Contact',
+                        '\Metatavu\Pakkasmarja\Api\Model\Contact',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -169,7 +169,7 @@ class ContactsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\BadRequest',
+                        '\Metatavu\Pakkasmarja\Api\Model\BadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -177,7 +177,7 @@ class ContactsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\Forbidden',
+                        '\Metatavu\Pakkasmarja\Api\Model\Forbidden',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -185,7 +185,7 @@ class ContactsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\InternalServerError',
+                        '\Metatavu\Pakkasmarja\Api\Model\InternalServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -227,7 +227,7 @@ class ContactsApi
      */
     public function findContactAsyncWithHttpInfo($id)
     {
-        $returnType = '\Pakkasmarja\Pakkasmarja\Api\Model\Contact';
+        $returnType = '\Metatavu\Pakkasmarja\Api\Model\Contact';
         $request = $this->findContactRequest($id);
 
         return $this->client
@@ -367,9 +367,9 @@ class ContactsApi
      * Lists contacts
      *
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Pakkasmarja\Pakkasmarja\Api\Model\Contact[]
+     * @return \Metatavu\Pakkasmarja\Api\Model\Contact[]
      */
     public function listContacts()
     {
@@ -383,13 +383,13 @@ class ContactsApi
      * Lists contacts
      *
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Pakkasmarja\Pakkasmarja\Api\Model\Contact[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Metatavu\Pakkasmarja\Api\Model\Contact[], HTTP status code, HTTP response headers (array of strings)
      */
     public function listContactsWithHttpInfo()
     {
-        $returnType = '\Pakkasmarja\Pakkasmarja\Api\Model\Contact[]';
+        $returnType = '\Metatavu\Pakkasmarja\Api\Model\Contact[]';
         $request = $this->listContactsRequest();
 
         try {
@@ -440,7 +440,7 @@ class ContactsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\Contact[]',
+                        '\Metatavu\Pakkasmarja\Api\Model\Contact[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -448,7 +448,7 @@ class ContactsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\BadRequest',
+                        '\Metatavu\Pakkasmarja\Api\Model\BadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -456,7 +456,7 @@ class ContactsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\Forbidden',
+                        '\Metatavu\Pakkasmarja\Api\Model\Forbidden',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -464,7 +464,7 @@ class ContactsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\InternalServerError',
+                        '\Metatavu\Pakkasmarja\Api\Model\InternalServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -504,7 +504,7 @@ class ContactsApi
      */
     public function listContactsAsyncWithHttpInfo()
     {
-        $returnType = '\Pakkasmarja\Pakkasmarja\Api\Model\Contact[]';
+        $returnType = '\Metatavu\Pakkasmarja\Api\Model\Contact[]';
         $request = $this->listContactsRequest();
 
         return $this->client
@@ -629,11 +629,11 @@ class ContactsApi
      * Update contact
      *
      * @param  string $id contact id (required)
-     * @param  \Pakkasmarja\Pakkasmarja\Api\Model\Contact $body Payload (required)
+     * @param  \Metatavu\Pakkasmarja\Api\Model\Contact $body Payload (required)
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Pakkasmarja\Pakkasmarja\Api\Model\Contact
+     * @return \Metatavu\Pakkasmarja\Api\Model\Contact
      */
     public function updateContact($id, $body)
     {
@@ -647,15 +647,15 @@ class ContactsApi
      * Update contact
      *
      * @param  string $id contact id (required)
-     * @param  \Pakkasmarja\Pakkasmarja\Api\Model\Contact $body Payload (required)
+     * @param  \Metatavu\Pakkasmarja\Api\Model\Contact $body Payload (required)
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Pakkasmarja\Pakkasmarja\Api\Model\Contact, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Metatavu\Pakkasmarja\Api\Model\Contact, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateContactWithHttpInfo($id, $body)
     {
-        $returnType = '\Pakkasmarja\Pakkasmarja\Api\Model\Contact';
+        $returnType = '\Metatavu\Pakkasmarja\Api\Model\Contact';
         $request = $this->updateContactRequest($id, $body);
 
         try {
@@ -706,7 +706,7 @@ class ContactsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\Contact',
+                        '\Metatavu\Pakkasmarja\Api\Model\Contact',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -714,7 +714,7 @@ class ContactsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\BadRequest',
+                        '\Metatavu\Pakkasmarja\Api\Model\BadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -722,7 +722,7 @@ class ContactsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\Forbidden',
+                        '\Metatavu\Pakkasmarja\Api\Model\Forbidden',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -730,7 +730,7 @@ class ContactsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\InternalServerError',
+                        '\Metatavu\Pakkasmarja\Api\Model\InternalServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -746,7 +746,7 @@ class ContactsApi
      * Update contact
      *
      * @param  string $id contact id (required)
-     * @param  \Pakkasmarja\Pakkasmarja\Api\Model\Contact $body Payload (required)
+     * @param  \Metatavu\Pakkasmarja\Api\Model\Contact $body Payload (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -767,14 +767,14 @@ class ContactsApi
      * Update contact
      *
      * @param  string $id contact id (required)
-     * @param  \Pakkasmarja\Pakkasmarja\Api\Model\Contact $body Payload (required)
+     * @param  \Metatavu\Pakkasmarja\Api\Model\Contact $body Payload (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateContactAsyncWithHttpInfo($id, $body)
     {
-        $returnType = '\Pakkasmarja\Pakkasmarja\Api\Model\Contact';
+        $returnType = '\Metatavu\Pakkasmarja\Api\Model\Contact';
         $request = $this->updateContactRequest($id, $body);
 
         return $this->client
@@ -818,7 +818,7 @@ class ContactsApi
      * Create request for operation 'updateContact'
      *
      * @param  string $id contact id (required)
-     * @param  \Pakkasmarja\Pakkasmarja\Api\Model\Contact $body Payload (required)
+     * @param  \Metatavu\Pakkasmarja\Api\Model\Contact $body Payload (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

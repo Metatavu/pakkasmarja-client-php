@@ -1,4 +1,4 @@
-# Pakkasmarja\OperationsApi
+# Metatavu\Pakkasmarja\OperationsApi
 
 All URIs are relative to *https://localhost/rest/v1*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **createOperation**
-> \Pakkasmarja\Pakkasmarja\Api\Model\Operation createOperation($body)
+> \Metatavu\Pakkasmarja\Api\Model\Operation createOperation($body)
 
 Creates new operation
 
@@ -19,8 +19,8 @@ Creates new operation
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Pakkasmarja\Api\OperationsApi(new \Http\Adapter\Guzzle6\Client());
-$body = new \Pakkasmarja\Pakkasmarja\Api\Model\Operation(); // \Pakkasmarja\Pakkasmarja\Api\Model\Operation | Payload
+$api_instance = new Metatavu\Pakkasmarja\Api\OperationsApi(new \Http\Adapter\Guzzle6\Client());
+$body = new \Metatavu\Pakkasmarja\Api\Model\Operation(); // \Metatavu\Pakkasmarja\Api\Model\Operation | Payload
 
 try {
     $result = $api_instance->createOperation($body);
@@ -35,11 +35,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Pakkasmarja\Pakkasmarja\Api\Model\Operation**](../Model/Operation.md)| Payload |
+ **body** | [**\Metatavu\Pakkasmarja\Api\Model\Operation**](../Model/Operation.md)| Payload |
 
 ### Return type
 
-[**\Pakkasmarja\Pakkasmarja\Api\Model\Operation**](../Model/Operation.md)
+[**\Metatavu\Pakkasmarja\Api\Model\Operation**](../Model/Operation.md)
 
 ### Authorization
 

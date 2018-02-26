@@ -1,4 +1,4 @@
-# Pakkasmarja\OperationReportsApi
+# Metatavu\Pakkasmarja\OperationReportsApi
 
 All URIs are relative to *https://localhost/rest/v1*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **findOperationReport**
-> \Pakkasmarja\Pakkasmarja\Api\Model\OperationReport findOperationReport($id)
+> \Metatavu\Pakkasmarja\Api\Model\OperationReport findOperationReport($id)
 
 Find operation report
 
@@ -21,7 +21,7 @@ Find operation report by id
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Pakkasmarja\Api\OperationReportsApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Metatavu\Pakkasmarja\Api\OperationReportsApi(new \Http\Adapter\Guzzle6\Client());
 $id = "id_example"; // string | operation report id
 
 try {
@@ -41,7 +41,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Pakkasmarja\Pakkasmarja\Api\Model\OperationReport**](../Model/OperationReport.md)
+[**\Metatavu\Pakkasmarja\Api\Model\OperationReport**](../Model/OperationReport.md)
 
 ### Authorization
 
@@ -55,7 +55,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listOperationReportItems**
-> \Pakkasmarja\Pakkasmarja\Api\Model\OperationReportItem listOperationReportItems($id)
+> \Metatavu\Pakkasmarja\Api\Model\OperationReportItem listOperationReportItems($id)
 
 List operation report items
 
@@ -66,7 +66,7 @@ Lists operation report items
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Pakkasmarja\Api\OperationReportsApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Metatavu\Pakkasmarja\Api\OperationReportsApi(new \Http\Adapter\Guzzle6\Client());
 $id = "id_example"; // string | operation report id
 
 try {
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Pakkasmarja\Pakkasmarja\Api\Model\OperationReportItem**](../Model/OperationReportItem.md)
+[**\Metatavu\Pakkasmarja\Api\Model\OperationReportItem**](../Model/OperationReportItem.md)
 
 ### Authorization
 
@@ -100,7 +100,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listOperationReports**
-> \Pakkasmarja\Pakkasmarja\Api\Model\OperationReport[] listOperationReports($type, $sortBy, $sortDir, $firstResult, $maxResults)
+> \Metatavu\Pakkasmarja\Api\Model\OperationReport[] listOperationReports($type, $sortBy, $sortDir, $firstResult, $maxResults)
 
 List operation reports
 
@@ -111,7 +111,7 @@ Lists operation reports
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Pakkasmarja\Api\OperationReportsApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Metatavu\Pakkasmarja\Api\OperationReportsApi(new \Http\Adapter\Guzzle6\Client());
 $type = "type_example"; // string | filter by type
 $sortBy = "sortBy_example"; // string | sort by (CREATED)
 $sortDir = "sortDir_example"; // string | sort direction (ASC, DESC)
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Pakkasmarja\Pakkasmarja\Api\Model\OperationReport[]**](../Model/OperationReport.md)
+[**\Metatavu\Pakkasmarja\Api\Model\OperationReport[]**](../Model/OperationReport.md)
 
 ### Authorization
 

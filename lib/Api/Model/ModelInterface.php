@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Pakkasmarja\Pakkasmarja\Api\Model
+ * @package  Metatavu\Pakkasmarja\Api\Model
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,12 +26,12 @@
  * Do not edit the class manually.
  */
 
-namespace Pakkasmarja\Pakkasmarja\Api\Model;
+namespace Metatavu\Pakkasmarja\Api\Model;
 
 /**
  * Interface abstracting model access.
  *
- * @package Pakkasmarja\Pakkasmarja\Api\Model
+ * @package Metatavu\Pakkasmarja\Api\Model
  * @author  Swagger Codegen team
  */
 interface ModelInterface

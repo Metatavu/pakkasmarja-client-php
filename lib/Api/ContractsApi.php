@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Pakkasmarja
+ * @package  Metatavu\Pakkasmarja
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,23 +25,23 @@
  * Do not edit the class manually.
  */
 
-namespace Pakkasmarja\Pakkasmarja\Api;
+namespace Metatavu\Pakkasmarja\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
-use Pakkasmarja\ApiException;
-use Pakkasmarja\Configuration;
-use Pakkasmarja\HeaderSelector;
-use Pakkasmarja\ObjectSerializer;
+use Metatavu\Pakkasmarja\ApiException;
+use Metatavu\Pakkasmarja\Configuration;
+use Metatavu\Pakkasmarja\HeaderSelector;
+use Metatavu\Pakkasmarja\ObjectSerializer;
 
 /**
  * ContractsApi Class Doc Comment
  *
  * @category Class
- * @package  Pakkasmarja
+ * @package  Metatavu\Pakkasmarja
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -87,11 +87,11 @@ class ContractsApi
      *
      * @param  string $id contract id (required)
      * @param  string $type document type (required)
-     * @param  \Pakkasmarja\Pakkasmarja\Api\Model\ContractDocumentSignRequest $body Payload (required)
+     * @param  \Metatavu\Pakkasmarja\Api\Model\ContractDocumentSignRequest $body Payload (required)
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Pakkasmarja\Pakkasmarja\Api\Model\ContractDocumentSignRequest
+     * @return \Metatavu\Pakkasmarja\Api\Model\ContractDocumentSignRequest
      */
     public function createContractDocumentSignRequest($id, $type, $body)
     {
@@ -106,15 +106,15 @@ class ContractsApi
      *
      * @param  string $id contract id (required)
      * @param  string $type document type (required)
-     * @param  \Pakkasmarja\Pakkasmarja\Api\Model\ContractDocumentSignRequest $body Payload (required)
+     * @param  \Metatavu\Pakkasmarja\Api\Model\ContractDocumentSignRequest $body Payload (required)
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Pakkasmarja\Pakkasmarja\Api\Model\ContractDocumentSignRequest, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Metatavu\Pakkasmarja\Api\Model\ContractDocumentSignRequest, HTTP status code, HTTP response headers (array of strings)
      */
     public function createContractDocumentSignRequestWithHttpInfo($id, $type, $body)
     {
-        $returnType = '\Pakkasmarja\Pakkasmarja\Api\Model\ContractDocumentSignRequest';
+        $returnType = '\Metatavu\Pakkasmarja\Api\Model\ContractDocumentSignRequest';
         $request = $this->createContractDocumentSignRequestRequest($id, $type, $body);
 
         try {
@@ -165,7 +165,7 @@ class ContractsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\ContractDocumentSignRequest',
+                        '\Metatavu\Pakkasmarja\Api\Model\ContractDocumentSignRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -173,7 +173,7 @@ class ContractsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\BadRequest',
+                        '\Metatavu\Pakkasmarja\Api\Model\BadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -181,7 +181,7 @@ class ContractsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\Forbidden',
+                        '\Metatavu\Pakkasmarja\Api\Model\Forbidden',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -189,7 +189,7 @@ class ContractsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\InternalServerError',
+                        '\Metatavu\Pakkasmarja\Api\Model\InternalServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -206,7 +206,7 @@ class ContractsApi
      *
      * @param  string $id contract id (required)
      * @param  string $type document type (required)
-     * @param  \Pakkasmarja\Pakkasmarja\Api\Model\ContractDocumentSignRequest $body Payload (required)
+     * @param  \Metatavu\Pakkasmarja\Api\Model\ContractDocumentSignRequest $body Payload (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -228,14 +228,14 @@ class ContractsApi
      *
      * @param  string $id contract id (required)
      * @param  string $type document type (required)
-     * @param  \Pakkasmarja\Pakkasmarja\Api\Model\ContractDocumentSignRequest $body Payload (required)
+     * @param  \Metatavu\Pakkasmarja\Api\Model\ContractDocumentSignRequest $body Payload (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createContractDocumentSignRequestAsyncWithHttpInfo($id, $type, $body)
     {
-        $returnType = '\Pakkasmarja\Pakkasmarja\Api\Model\ContractDocumentSignRequest';
+        $returnType = '\Metatavu\Pakkasmarja\Api\Model\ContractDocumentSignRequest';
         $request = $this->createContractDocumentSignRequestRequest($id, $type, $body);
 
         return $this->client
@@ -280,7 +280,7 @@ class ContractsApi
      *
      * @param  string $id contract id (required)
      * @param  string $type document type (required)
-     * @param  \Pakkasmarja\Pakkasmarja\Api\Model\ContractDocumentSignRequest $body Payload (required)
+     * @param  \Metatavu\Pakkasmarja\Api\Model\ContractDocumentSignRequest $body Payload (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -402,9 +402,9 @@ class ContractsApi
      * @param  string $id contract id (required)
      * @param  string $accept Expected response format. Accepted values application/json for JSON reponse (default) and application/vnd.openxmlformats-officedocument.spreadsheetml.sheet for Excel response (optional)
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Pakkasmarja\Pakkasmarja\Api\Model\Contract
+     * @return \Metatavu\Pakkasmarja\Api\Model\Contract
      */
     public function findContract($id, $accept = null)
     {
@@ -420,13 +420,13 @@ class ContractsApi
      * @param  string $id contract id (required)
      * @param  string $accept Expected response format. Accepted values application/json for JSON reponse (default) and application/vnd.openxmlformats-officedocument.spreadsheetml.sheet for Excel response (optional)
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Pakkasmarja\Pakkasmarja\Api\Model\Contract, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Metatavu\Pakkasmarja\Api\Model\Contract, HTTP status code, HTTP response headers (array of strings)
      */
     public function findContractWithHttpInfo($id, $accept = null)
     {
-        $returnType = '\Pakkasmarja\Pakkasmarja\Api\Model\Contract';
+        $returnType = '\Metatavu\Pakkasmarja\Api\Model\Contract';
         $request = $this->findContractRequest($id, $accept);
 
         try {
@@ -477,7 +477,7 @@ class ContractsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\Contract',
+                        '\Metatavu\Pakkasmarja\Api\Model\Contract',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -485,7 +485,7 @@ class ContractsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\BadRequest',
+                        '\Metatavu\Pakkasmarja\Api\Model\BadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -493,7 +493,7 @@ class ContractsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\Forbidden',
+                        '\Metatavu\Pakkasmarja\Api\Model\Forbidden',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -501,7 +501,7 @@ class ContractsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\InternalServerError',
+                        '\Metatavu\Pakkasmarja\Api\Model\InternalServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -545,7 +545,7 @@ class ContractsApi
      */
     public function findContractAsyncWithHttpInfo($id, $accept = null)
     {
-        $returnType = '\Pakkasmarja\Pakkasmarja\Api\Model\Contract';
+        $returnType = '\Metatavu\Pakkasmarja\Api\Model\Contract';
         $request = $this->findContractRequest($id, $accept);
 
         return $this->client
@@ -693,7 +693,7 @@ class ContractsApi
      * @param  string $type document type (required)
      * @param  string $format document format (HTML or PDF) (required)
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -712,7 +712,7 @@ class ContractsApi
      * @param  string $type document type (required)
      * @param  string $format document format (HTML or PDF) (required)
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -777,7 +777,7 @@ class ContractsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\BadRequest',
+                        '\Metatavu\Pakkasmarja\Api\Model\BadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -785,7 +785,7 @@ class ContractsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\Forbidden',
+                        '\Metatavu\Pakkasmarja\Api\Model\Forbidden',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -793,7 +793,7 @@ class ContractsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\InternalServerError',
+                        '\Metatavu\Pakkasmarja\Api\Model\InternalServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1006,9 +1006,9 @@ class ContractsApi
      *
      * @param  string $accept Expected response format. Accepted values application/json for JSON reponse (default) and application/vnd.openxmlformats-officedocument.spreadsheetml.sheet for Excel response (optional)
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Pakkasmarja\Pakkasmarja\Api\Model\Contract[]
+     * @return \Metatavu\Pakkasmarja\Api\Model\Contract[]
      */
     public function listContracts($accept = null)
     {
@@ -1023,13 +1023,13 @@ class ContractsApi
      *
      * @param  string $accept Expected response format. Accepted values application/json for JSON reponse (default) and application/vnd.openxmlformats-officedocument.spreadsheetml.sheet for Excel response (optional)
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Pakkasmarja\Pakkasmarja\Api\Model\Contract[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Metatavu\Pakkasmarja\Api\Model\Contract[], HTTP status code, HTTP response headers (array of strings)
      */
     public function listContractsWithHttpInfo($accept = null)
     {
-        $returnType = '\Pakkasmarja\Pakkasmarja\Api\Model\Contract[]';
+        $returnType = '\Metatavu\Pakkasmarja\Api\Model\Contract[]';
         $request = $this->listContractsRequest($accept);
 
         try {
@@ -1080,7 +1080,7 @@ class ContractsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\Contract[]',
+                        '\Metatavu\Pakkasmarja\Api\Model\Contract[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1088,7 +1088,7 @@ class ContractsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\BadRequest',
+                        '\Metatavu\Pakkasmarja\Api\Model\BadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1096,7 +1096,7 @@ class ContractsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\Forbidden',
+                        '\Metatavu\Pakkasmarja\Api\Model\Forbidden',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1104,7 +1104,7 @@ class ContractsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\InternalServerError',
+                        '\Metatavu\Pakkasmarja\Api\Model\InternalServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1146,7 +1146,7 @@ class ContractsApi
      */
     public function listContractsAsyncWithHttpInfo($accept = null)
     {
-        $returnType = '\Pakkasmarja\Pakkasmarja\Api\Model\Contract[]';
+        $returnType = '\Metatavu\Pakkasmarja\Api\Model\Contract[]';
         $request = $this->listContractsRequest($accept);
 
         return $this->client
@@ -1276,11 +1276,11 @@ class ContractsApi
      * Update contract
      *
      * @param  string $id contract id (required)
-     * @param  \Pakkasmarja\Pakkasmarja\Api\Model\Contract $body Payload (required)
+     * @param  \Metatavu\Pakkasmarja\Api\Model\Contract $body Payload (required)
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Pakkasmarja\Pakkasmarja\Api\Model\Contract
+     * @return \Metatavu\Pakkasmarja\Api\Model\Contract
      */
     public function updateContract($id, $body)
     {
@@ -1294,15 +1294,15 @@ class ContractsApi
      * Update contract
      *
      * @param  string $id contract id (required)
-     * @param  \Pakkasmarja\Pakkasmarja\Api\Model\Contract $body Payload (required)
+     * @param  \Metatavu\Pakkasmarja\Api\Model\Contract $body Payload (required)
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Pakkasmarja\Pakkasmarja\Api\Model\Contract, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Metatavu\Pakkasmarja\Api\Model\Contract, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateContractWithHttpInfo($id, $body)
     {
-        $returnType = '\Pakkasmarja\Pakkasmarja\Api\Model\Contract';
+        $returnType = '\Metatavu\Pakkasmarja\Api\Model\Contract';
         $request = $this->updateContractRequest($id, $body);
 
         try {
@@ -1353,7 +1353,7 @@ class ContractsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\Contract',
+                        '\Metatavu\Pakkasmarja\Api\Model\Contract',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1361,7 +1361,7 @@ class ContractsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\BadRequest',
+                        '\Metatavu\Pakkasmarja\Api\Model\BadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1369,7 +1369,7 @@ class ContractsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\Forbidden',
+                        '\Metatavu\Pakkasmarja\Api\Model\Forbidden',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1377,7 +1377,7 @@ class ContractsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\InternalServerError',
+                        '\Metatavu\Pakkasmarja\Api\Model\InternalServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1393,7 +1393,7 @@ class ContractsApi
      * Update contract
      *
      * @param  string $id contract id (required)
-     * @param  \Pakkasmarja\Pakkasmarja\Api\Model\Contract $body Payload (required)
+     * @param  \Metatavu\Pakkasmarja\Api\Model\Contract $body Payload (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1414,14 +1414,14 @@ class ContractsApi
      * Update contract
      *
      * @param  string $id contract id (required)
-     * @param  \Pakkasmarja\Pakkasmarja\Api\Model\Contract $body Payload (required)
+     * @param  \Metatavu\Pakkasmarja\Api\Model\Contract $body Payload (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateContractAsyncWithHttpInfo($id, $body)
     {
-        $returnType = '\Pakkasmarja\Pakkasmarja\Api\Model\Contract';
+        $returnType = '\Metatavu\Pakkasmarja\Api\Model\Contract';
         $request = $this->updateContractRequest($id, $body);
 
         return $this->client
@@ -1465,7 +1465,7 @@ class ContractsApi
      * Create request for operation 'updateContract'
      *
      * @param  string $id contract id (required)
-     * @param  \Pakkasmarja\Pakkasmarja\Api\Model\Contract $body Payload (required)
+     * @param  \Metatavu\Pakkasmarja\Api\Model\Contract $body Payload (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

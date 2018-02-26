@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **companyName** | **string** |  | [optional] 
 **phoneNumbers** | **string[]** |  | [optional] 
 **email** | **string** |  | [optional] 
-**addresses** | [**\Pakkasmarja\Pakkasmarja\Api\Model\Address[]**](Address.md) |  | [optional] 
+**addresses** | [**\Metatavu\Pakkasmarja\Api\Model\Address[]**](Address.md) |  | [optional] 
 **bIC** | **string** |  | [optional] 
 **iBAN** | **string** |  | [optional] 
 **taxCode** | **string** |  | [optional] 

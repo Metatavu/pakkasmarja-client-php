@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Pakkasmarja
+ * @package  Metatavu\Pakkasmarja
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,23 +25,23 @@
  * Do not edit the class manually.
  */
 
-namespace Pakkasmarja\Pakkasmarja\Api;
+namespace Metatavu\Pakkasmarja\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
-use Pakkasmarja\ApiException;
-use Pakkasmarja\Configuration;
-use Pakkasmarja\HeaderSelector;
-use Pakkasmarja\ObjectSerializer;
+use Metatavu\Pakkasmarja\ApiException;
+use Metatavu\Pakkasmarja\Configuration;
+use Metatavu\Pakkasmarja\HeaderSelector;
+use Metatavu\Pakkasmarja\ObjectSerializer;
 
 /**
  * OperationReportsApi Class Doc Comment
  *
  * @category Class
- * @package  Pakkasmarja
+ * @package  Metatavu\Pakkasmarja
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -87,9 +87,9 @@ class OperationReportsApi
      *
      * @param  string $id operation report id (required)
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Pakkasmarja\Pakkasmarja\Api\Model\OperationReport
+     * @return \Metatavu\Pakkasmarja\Api\Model\OperationReport
      */
     public function findOperationReport($id)
     {
@@ -104,13 +104,13 @@ class OperationReportsApi
      *
      * @param  string $id operation report id (required)
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Pakkasmarja\Pakkasmarja\Api\Model\OperationReport, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Metatavu\Pakkasmarja\Api\Model\OperationReport, HTTP status code, HTTP response headers (array of strings)
      */
     public function findOperationReportWithHttpInfo($id)
     {
-        $returnType = '\Pakkasmarja\Pakkasmarja\Api\Model\OperationReport';
+        $returnType = '\Metatavu\Pakkasmarja\Api\Model\OperationReport';
         $request = $this->findOperationReportRequest($id);
 
         try {
@@ -161,7 +161,7 @@ class OperationReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\OperationReport',
+                        '\Metatavu\Pakkasmarja\Api\Model\OperationReport',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -169,7 +169,7 @@ class OperationReportsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\BadRequest',
+                        '\Metatavu\Pakkasmarja\Api\Model\BadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -177,7 +177,7 @@ class OperationReportsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\Forbidden',
+                        '\Metatavu\Pakkasmarja\Api\Model\Forbidden',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -185,7 +185,7 @@ class OperationReportsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\InternalServerError',
+                        '\Metatavu\Pakkasmarja\Api\Model\InternalServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -227,7 +227,7 @@ class OperationReportsApi
      */
     public function findOperationReportAsyncWithHttpInfo($id)
     {
-        $returnType = '\Pakkasmarja\Pakkasmarja\Api\Model\OperationReport';
+        $returnType = '\Metatavu\Pakkasmarja\Api\Model\OperationReport';
         $request = $this->findOperationReportRequest($id);
 
         return $this->client
@@ -368,9 +368,9 @@ class OperationReportsApi
      *
      * @param  string $id operation report id (required)
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Pakkasmarja\Pakkasmarja\Api\Model\OperationReportItem
+     * @return \Metatavu\Pakkasmarja\Api\Model\OperationReportItem
      */
     public function listOperationReportItems($id)
     {
@@ -385,13 +385,13 @@ class OperationReportsApi
      *
      * @param  string $id operation report id (required)
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Pakkasmarja\Pakkasmarja\Api\Model\OperationReportItem, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Metatavu\Pakkasmarja\Api\Model\OperationReportItem, HTTP status code, HTTP response headers (array of strings)
      */
     public function listOperationReportItemsWithHttpInfo($id)
     {
-        $returnType = '\Pakkasmarja\Pakkasmarja\Api\Model\OperationReportItem';
+        $returnType = '\Metatavu\Pakkasmarja\Api\Model\OperationReportItem';
         $request = $this->listOperationReportItemsRequest($id);
 
         try {
@@ -442,7 +442,7 @@ class OperationReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\OperationReportItem',
+                        '\Metatavu\Pakkasmarja\Api\Model\OperationReportItem',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -450,7 +450,7 @@ class OperationReportsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\BadRequest',
+                        '\Metatavu\Pakkasmarja\Api\Model\BadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -458,7 +458,7 @@ class OperationReportsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\Forbidden',
+                        '\Metatavu\Pakkasmarja\Api\Model\Forbidden',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -466,7 +466,7 @@ class OperationReportsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\InternalServerError',
+                        '\Metatavu\Pakkasmarja\Api\Model\InternalServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -508,7 +508,7 @@ class OperationReportsApi
      */
     public function listOperationReportItemsAsyncWithHttpInfo($id)
     {
-        $returnType = '\Pakkasmarja\Pakkasmarja\Api\Model\OperationReportItem';
+        $returnType = '\Metatavu\Pakkasmarja\Api\Model\OperationReportItem';
         $request = $this->listOperationReportItemsRequest($id);
 
         return $this->client
@@ -653,9 +653,9 @@ class OperationReportsApi
      * @param  int $firstResult Offset of first result. Defaults to 0 (optional)
      * @param  int $maxResults Max results. Defaults to 20 (optional)
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Pakkasmarja\Pakkasmarja\Api\Model\OperationReport[]
+     * @return \Metatavu\Pakkasmarja\Api\Model\OperationReport[]
      */
     public function listOperationReports($type = null, $sortBy = null, $sortDir = null, $firstResult = null, $maxResults = null)
     {
@@ -674,13 +674,13 @@ class OperationReportsApi
      * @param  int $firstResult Offset of first result. Defaults to 0 (optional)
      * @param  int $maxResults Max results. Defaults to 20 (optional)
      *
-     * @throws \Pakkasmarja\ApiException on non-2xx response
+     * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Pakkasmarja\Pakkasmarja\Api\Model\OperationReport[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Metatavu\Pakkasmarja\Api\Model\OperationReport[], HTTP status code, HTTP response headers (array of strings)
      */
     public function listOperationReportsWithHttpInfo($type = null, $sortBy = null, $sortDir = null, $firstResult = null, $maxResults = null)
     {
-        $returnType = '\Pakkasmarja\Pakkasmarja\Api\Model\OperationReport[]';
+        $returnType = '\Metatavu\Pakkasmarja\Api\Model\OperationReport[]';
         $request = $this->listOperationReportsRequest($type, $sortBy, $sortDir, $firstResult, $maxResults);
 
         try {
@@ -731,7 +731,7 @@ class OperationReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\OperationReport[]',
+                        '\Metatavu\Pakkasmarja\Api\Model\OperationReport[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -739,7 +739,7 @@ class OperationReportsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\BadRequest',
+                        '\Metatavu\Pakkasmarja\Api\Model\BadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -747,7 +747,7 @@ class OperationReportsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\Forbidden',
+                        '\Metatavu\Pakkasmarja\Api\Model\Forbidden',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -755,7 +755,7 @@ class OperationReportsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Pakkasmarja\Pakkasmarja\Api\Model\InternalServerError',
+                        '\Metatavu\Pakkasmarja\Api\Model\InternalServerError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -805,7 +805,7 @@ class OperationReportsApi
      */
     public function listOperationReportsAsyncWithHttpInfo($type = null, $sortBy = null, $sortDir = null, $firstResult = null, $maxResults = null)
     {
-        $returnType = '\Pakkasmarja\Pakkasmarja\Api\Model\OperationReport[]';
+        $returnType = '\Metatavu\Pakkasmarja\Api\Model\OperationReport[]';
         $request = $this->listOperationReportsRequest($type, $sortBy, $sortDir, $firstResult, $maxResults);
 
         return $this->client

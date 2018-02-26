@@ -1,4 +1,4 @@
-# Pakkasmarja\ContactsApi
+# Metatavu\Pakkasmarja\ContactsApi
 
 All URIs are relative to *https://localhost/rest/v1*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **findContact**
-> \Pakkasmarja\Pakkasmarja\Api\Model\Contact findContact($id)
+> \Metatavu\Pakkasmarja\Api\Model\Contact findContact($id)
 
 Find contact
 
@@ -21,7 +21,7 @@ Finds contact by id
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Pakkasmarja\Api\ContactsApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Metatavu\Pakkasmarja\Api\ContactsApi(new \Http\Adapter\Guzzle6\Client());
 $id = "id_example"; // string | contact id
 
 try {
@@ -41,7 +41,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Pakkasmarja\Pakkasmarja\Api\Model\Contact**](../Model/Contact.md)
+[**\Metatavu\Pakkasmarja\Api\Model\Contact**](../Model/Contact.md)
 
 ### Authorization
 
@@ -55,7 +55,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listContacts**
-> \Pakkasmarja\Pakkasmarja\Api\Model\Contact[] listContacts()
+> \Metatavu\Pakkasmarja\Api\Model\Contact[] listContacts()
 
 Lists contacts
 
@@ -66,7 +66,7 @@ Lists contacts
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Pakkasmarja\Api\ContactsApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Metatavu\Pakkasmarja\Api\ContactsApi(new \Http\Adapter\Guzzle6\Client());
 
 try {
     $result = $api_instance->listContacts();
@@ -82,7 +82,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Pakkasmarja\Pakkasmarja\Api\Model\Contact[]**](../Model/Contact.md)
+[**\Metatavu\Pakkasmarja\Api\Model\Contact[]**](../Model/Contact.md)
 
 ### Authorization
 
@@ -96,7 +96,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateContact**
-> \Pakkasmarja\Pakkasmarja\Api\Model\Contact updateContact($id, $body)
+> \Metatavu\Pakkasmarja\Api\Model\Contact updateContact($id, $body)
 
 Update contact
 
@@ -107,9 +107,9 @@ Updates single contact
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Pakkasmarja\Api\ContactsApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Metatavu\Pakkasmarja\Api\ContactsApi(new \Http\Adapter\Guzzle6\Client());
 $id = "id_example"; // string | contact id
-$body = new \Pakkasmarja\Pakkasmarja\Api\Model\Contact(); // \Pakkasmarja\Pakkasmarja\Api\Model\Contact | Payload
+$body = new \Metatavu\Pakkasmarja\Api\Model\Contact(); // \Metatavu\Pakkasmarja\Api\Model\Contact | Payload
 
 try {
     $result = $api_instance->updateContact($id, $body);
@@ -125,11 +125,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| contact id |
- **body** | [**\Pakkasmarja\Pakkasmarja\Api\Model\Contact**](../Model/Contact.md)| Payload |
+ **body** | [**\Metatavu\Pakkasmarja\Api\Model\Contact**](../Model/Contact.md)| Payload |
 
 ### Return type
 
-[**\Pakkasmarja\Pakkasmarja\Api\Model\Contact**](../Model/Contact.md)
+[**\Metatavu\Pakkasmarja\Api\Model\Contact**](../Model/Contact.md)
 
 ### Authorization
 

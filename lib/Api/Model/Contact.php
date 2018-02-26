@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Pakkasmarja
+ * @package  Metatavu\Pakkasmarja
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Pakkasmarja\Pakkasmarja\Api\Model;
+namespace Metatavu\Pakkasmarja\Api\Model;
 
 use \ArrayAccess;
-use \Pakkasmarja\ObjectSerializer;
+use \Metatavu\Pakkasmarja\ObjectSerializer;
 
 /**
  * Contact Class Doc Comment
  *
  * @category Class
- * @package  Pakkasmarja
+ * @package  Metatavu\Pakkasmarja
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -62,7 +62,7 @@ class Contact implements ModelInterface, ArrayAccess
         'companyName' => 'string',
         'phoneNumbers' => 'string[]',
         'email' => 'string',
-        'addresses' => '\Pakkasmarja\Pakkasmarja\Api\Model\Address[]',
+        'addresses' => '\Metatavu\Pakkasmarja\Api\Model\Address[]',
         'bIC' => 'string',
         'iBAN' => 'string',
         'taxCode' => 'string',
@@ -446,7 +446,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Gets addresses
      *
-     * @return \Pakkasmarja\Pakkasmarja\Api\Model\Address[]
+     * @return \Metatavu\Pakkasmarja\Api\Model\Address[]
      */
     public function getAddresses()
     {
@@ -456,7 +456,7 @@ class Contact implements ModelInterface, ArrayAccess
     /**
      * Sets addresses
      *
-     * @param \Pakkasmarja\Pakkasmarja\Api\Model\Address[] $addresses
+     * @param \Metatavu\Pakkasmarja\Api\Model\Address[] $addresses
      *
      * @return $this
      */

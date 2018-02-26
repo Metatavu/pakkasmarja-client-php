@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Pakkasmarja
+ * @package  Metatavu\Pakkasmarja
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Pakkasmarja\Pakkasmarja\Api\Model;
+namespace Metatavu\Pakkasmarja\Api\Model;
 
 use \ArrayAccess;
-use \Pakkasmarja\ObjectSerializer;
+use \Metatavu\Pakkasmarja\ObjectSerializer;
 
 /**
  * Contract Class Doc Comment
  *
  * @category Class
- * @package  Pakkasmarja
+ * @package  Metatavu\Pakkasmarja
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
