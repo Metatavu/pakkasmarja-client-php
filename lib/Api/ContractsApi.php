@@ -1625,14 +1625,15 @@ class ContractsApi
      * List contract document templates
      *
      * @param  string $contractId contract id (required)
+     * @param  string $type Filter results by document template type (optional)
      *
      * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Metatavu\Pakkasmarja\Api\Model\ContractDocumentTemplate[]
      */
-    public function listContractDocumentTemplates($contractId)
+    public function listContractDocumentTemplates($contractId, $type = null)
     {
-        list($response) = $this->listContractDocumentTemplatesWithHttpInfo($contractId);
+        list($response) = $this->listContractDocumentTemplatesWithHttpInfo($contractId, $type);
         return $response;
     }
 
@@ -1642,15 +1643,16 @@ class ContractsApi
      * List contract document templates
      *
      * @param  string $contractId contract id (required)
+     * @param  string $type Filter results by document template type (optional)
      *
      * @throws \Metatavu\Pakkasmarja\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Metatavu\Pakkasmarja\Api\Model\ContractDocumentTemplate[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function listContractDocumentTemplatesWithHttpInfo($contractId)
+    public function listContractDocumentTemplatesWithHttpInfo($contractId, $type = null)
     {
         $returnType = '\Metatavu\Pakkasmarja\Api\Model\ContractDocumentTemplate[]';
-        $request = $this->listContractDocumentTemplatesRequest($contractId);
+        $request = $this->listContractDocumentTemplatesRequest($contractId, $type);
 
         try {
 
@@ -1740,13 +1742,14 @@ class ContractsApi
      * List contract document templates
      *
      * @param  string $contractId contract id (required)
+     * @param  string $type Filter results by document template type (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listContractDocumentTemplatesAsync($contractId)
+    public function listContractDocumentTemplatesAsync($contractId, $type = null)
     {
-        return $this->listContractDocumentTemplatesAsyncWithHttpInfo($contractId)
+        return $this->listContractDocumentTemplatesAsyncWithHttpInfo($contractId, $type)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1760,14 +1763,15 @@ class ContractsApi
      * List contract document templates
      *
      * @param  string $contractId contract id (required)
+     * @param  string $type Filter results by document template type (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listContractDocumentTemplatesAsyncWithHttpInfo($contractId)
+    public function listContractDocumentTemplatesAsyncWithHttpInfo($contractId, $type = null)
     {
         $returnType = '\Metatavu\Pakkasmarja\Api\Model\ContractDocumentTemplate[]';
-        $request = $this->listContractDocumentTemplatesRequest($contractId);
+        $request = $this->listContractDocumentTemplatesRequest($contractId, $type);
 
         return $this->client
             ->sendAsync($request)
@@ -1810,11 +1814,12 @@ class ContractsApi
      * Create request for operation 'listContractDocumentTemplates'
      *
      * @param  string $contractId contract id (required)
+     * @param  string $type Filter results by document template type (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function listContractDocumentTemplatesRequest($contractId)
+    protected function listContractDocumentTemplatesRequest($contractId, $type = null)
     {
         // verify the required parameter 'contractId' is set
         if ($contractId === null) {
@@ -1830,6 +1835,10 @@ class ContractsApi
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        if ($type !== null) {
+            $queryParams['type'] = ObjectSerializer::toQueryValue($type);
+        }
 
         // path params
         if ($contractId !== null) {

@@ -280,7 +280,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listContractDocumentTemplates**
-> \Metatavu\Pakkasmarja\Api\Model\ContractDocumentTemplate[] listContractDocumentTemplates($contractId)
+> \Metatavu\Pakkasmarja\Api\Model\ContractDocumentTemplate[] listContractDocumentTemplates($contractId, $type)
 
 List contract document templates
 
@@ -298,9 +298,10 @@ Metatavu\Pakkasmarja\Configuration::getDefaultConfiguration()->setApiKey('Author
 
 $api_instance = new Metatavu\Pakkasmarja\Api\ContractsApi(new \Http\Adapter\Guzzle6\Client());
 $contractId = "contractId_example"; // string | contract id
+$type = "type_example"; // string | Filter results by document template type
 
 try {
-    $result = $api_instance->listContractDocumentTemplates($contractId);
+    $result = $api_instance->listContractDocumentTemplates($contractId, $type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContractsApi->listContractDocumentTemplates: ', $e->getMessage(), PHP_EOL;
@@ -313,6 +314,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contractId** | **string**| contract id |
+ **type** | **string**| Filter results by document template type | [optional]
 
 ### Return type
 
