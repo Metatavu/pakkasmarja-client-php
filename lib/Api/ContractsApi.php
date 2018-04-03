@@ -284,7 +284,7 @@ class ContractsApi
             );
         }
 
-        $resourcePath = '/contacts';
+        $resourcePath = '/contracts';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
