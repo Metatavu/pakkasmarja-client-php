@@ -84,6 +84,7 @@ Class | Method | HTTP request | Description
 *ContactsApi* | [**findContact**](docs/Api/ContactsApi.md#findcontact) | **GET** /contacts/{id} | Find contact
 *ContactsApi* | [**listContacts**](docs/Api/ContactsApi.md#listcontacts) | **GET** /contacts | Lists contacts
 *ContactsApi* | [**updateContact**](docs/Api/ContactsApi.md#updatecontact) | **PUT** /contacts/{id} | Update contact
+*ContactsApi* | [**updateContactCredentials**](docs/Api/ContactsApi.md#updatecontactcredentials) | **PUT** /contacts/{id}/credentials | Update contact credentials
 *ContractsApi* | [**createContract**](docs/Api/ContractsApi.md#createcontract) | **POST** /contracts | Create contract
 *ContractsApi* | [**createContractDocumentSignRequest**](docs/Api/ContractsApi.md#createcontractdocumentsignrequest) | **POST** /contracts/{id}/documents/{type}/signRequests | Requests contract document electronic signing
 *ContractsApi* | [**createContractDocumentTemplate**](docs/Api/ContractsApi.md#createcontractdocumenttemplate) | **POST** /contracts/{contractId}/documentTemplates | Create contract document template
@@ -116,11 +117,13 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [Address](docs/Model/Address.md)
+ - [AreaDetail](docs/Model/AreaDetail.md)
  - [BadRequest](docs/Model/BadRequest.md)
  - [Contact](docs/Model/Contact.md)
  - [Contract](docs/Model/Contract.md)
  - [ContractDocumentSignRequest](docs/Model/ContractDocumentSignRequest.md)
  - [ContractDocumentTemplate](docs/Model/ContractDocumentTemplate.md)
+ - [Credentials](docs/Model/Credentials.md)
  - [DeliveryPlace](docs/Model/DeliveryPlace.md)
  - [Forbidden](docs/Model/Forbidden.md)
  - [InternalServerError](docs/Model/InternalServerError.md)
