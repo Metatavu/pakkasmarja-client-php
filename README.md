@@ -62,14 +62,16 @@ Metatavu\Pakkasmarja\Configuration::getDefaultConfiguration()->setApiKey('Author
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Metatavu\Pakkasmarja\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$api_instance = new Metatavu\Pakkasmarja\Api\ContactsApi();
-$id = "id_example"; // string | contact id
+$api_instance = new Metatavu\Pakkasmarja\Api\ChatThreadsApi();
+$threadId = 789; // int | thread id
+$predefinedTextId = 789; // int | predefined text id
+$payload = new \Metatavu\Pakkasmarja\Api\Model\ChatThreadPredefinedText(); // \Metatavu\Pakkasmarja\Api\Model\ChatThreadPredefinedText | predefined text
 
 try {
-    $result = $api_instance->findContact($id);
+    $result = $api_instance->createThreadPredefinedText($threadId, $predefinedTextId, $payload);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContactsApi->findContact: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ChatThreadsApi->createThreadPredefinedText: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -81,6 +83,10 @@ All URIs are relative to *https://localhost/rest/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*ChatThreadsApi* | [**createThreadPredefinedText**](docs/Api/ChatThreadsApi.md#createthreadpredefinedtext) | **POST** /chatThreads/{threadId}/predefinedTexts | Creates a predefined text for a thread
+*ChatThreadsApi* | [**findChatThreadPredefinedText**](docs/Api/ChatThreadsApi.md#findchatthreadpredefinedtext) | **GET** /chatThreads/{threadId}/predefinedTexts/{predefinedTextId} | Finds a thread predefined text
+*ChatThreadsApi* | [**listChatThreadPredefinedTexts**](docs/Api/ChatThreadsApi.md#listchatthreadpredefinedtexts) | **GET** /chatThreads/{threadId}/predefinedTexts | List thread&#39;s predefined texts
+*ChatThreadsApi* | [**updateChatThreadPredefinedText**](docs/Api/ChatThreadsApi.md#updatechatthreadpredefinedtext) | **PUT** /chatThreads/{threadId}/predefinedTexts/{predefinedTextId} | Updates a thread&#39;s predefined text
 *ContactsApi* | [**findContact**](docs/Api/ContactsApi.md#findcontact) | **GET** /contacts/{id} | Find contact
 *ContactsApi* | [**listContacts**](docs/Api/ContactsApi.md#listcontacts) | **GET** /contacts | Lists contacts
 *ContactsApi* | [**updateContact**](docs/Api/ContactsApi.md#updatecontact) | **PUT** /contacts/{id} | Update contact
@@ -113,10 +119,6 @@ Class | Method | HTTP request | Description
 *OperationReportsApi* | [**listOperationReports**](docs/Api/OperationReportsApi.md#listoperationreports) | **GET** /operationReports | List operation reports
 *OperationsApi* | [**createOperation**](docs/Api/OperationsApi.md#createoperation) | **POST** /operations | Creates new operation
 *SignAuthenticationServicesApi* | [**listSignAuthenticationServices**](docs/Api/SignAuthenticationServicesApi.md#listsignauthenticationservices) | **GET** /signAuthenticationServices | List sign authentication services
-*ThreadsApi* | [**createThreadPredefinedText**](docs/Api/ThreadsApi.md#createthreadpredefinedtext) | **POST** /threads/{threadId}/predefinedTexts | Creates a predefined text for a thread
-*ThreadsApi* | [**findThreadPredefinedText**](docs/Api/ThreadsApi.md#findthreadpredefinedtext) | **GET** /threads/{threadId}/predefinedTexts/{predefinedTextId} | Finds a thread predefined text
-*ThreadsApi* | [**listThreadPredefinedTexts**](docs/Api/ThreadsApi.md#listthreadpredefinedtexts) | **GET** /threads/{threadId}/predefinedTexts | List thread&#39;s predefined texts
-*ThreadsApi* | [**updateThreadPredefinedText**](docs/Api/ThreadsApi.md#updatethreadpredefinedtext) | **PUT** /threads/{threadId}/predefinedTexts/{predefinedTextId} | Updates a thread&#39;s predefined text
 
 
 ## Documentation For Models
@@ -124,6 +126,8 @@ Class | Method | HTTP request | Description
  - [Address](docs/Model/Address.md)
  - [AreaDetail](docs/Model/AreaDetail.md)
  - [BadRequest](docs/Model/BadRequest.md)
+ - [ChatThread](docs/Model/ChatThread.md)
+ - [ChatThreadPredefinedText](docs/Model/ChatThreadPredefinedText.md)
  - [Contact](docs/Model/Contact.md)
  - [Contract](docs/Model/Contract.md)
  - [ContractDocumentSignRequest](docs/Model/ContractDocumentSignRequest.md)
@@ -141,8 +145,6 @@ Class | Method | HTTP request | Description
  - [OperationReportItem](docs/Model/OperationReportItem.md)
  - [Price](docs/Model/Price.md)
  - [SignAuthenticationService](docs/Model/SignAuthenticationService.md)
- - [Thread](docs/Model/Thread.md)
- - [ThreadPredefinedText](docs/Model/ThreadPredefinedText.md)
 
 
 ## Documentation For Authorization
