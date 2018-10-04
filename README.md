@@ -113,6 +113,10 @@ Class | Method | HTTP request | Description
 *OperationReportsApi* | [**listOperationReports**](docs/Api/OperationReportsApi.md#listoperationreports) | **GET** /operationReports | List operation reports
 *OperationsApi* | [**createOperation**](docs/Api/OperationsApi.md#createoperation) | **POST** /operations | Creates new operation
 *SignAuthenticationServicesApi* | [**listSignAuthenticationServices**](docs/Api/SignAuthenticationServicesApi.md#listsignauthenticationservices) | **GET** /signAuthenticationServices | List sign authentication services
+*ThreadsApi* | [**createThreadPredefinedText**](docs/Api/ThreadsApi.md#createthreadpredefinedtext) | **POST** /threads/{threadId}/predefinedTexts | Creates a predefined text for a thread
+*ThreadsApi* | [**findThreadPredefinedText**](docs/Api/ThreadsApi.md#findthreadpredefinedtext) | **GET** /threads/{threadId}/predefinedTexts/{predefinedTextId} | Finds a thread predefined text
+*ThreadsApi* | [**listThreadPredefinedTexts**](docs/Api/ThreadsApi.md#listthreadpredefinedtexts) | **GET** /threads/{threadId}/predefinedTexts | List thread&#39;s predefined texts
+*ThreadsApi* | [**updateThreadPredefinedText**](docs/Api/ThreadsApi.md#updatethreadpredefinedtext) | **PUT** /threads/{threadId}/predefinedTexts/{predefinedTextId} | Updates a thread&#39;s predefined text
 
 
 ## Documentation For Models
@@ -137,6 +141,8 @@ Class | Method | HTTP request | Description
  - [OperationReportItem](docs/Model/OperationReportItem.md)
  - [Price](docs/Model/Price.md)
  - [SignAuthenticationService](docs/Model/SignAuthenticationService.md)
+ - [Thread](docs/Model/Thread.md)
+ - [ThreadPredefinedText](docs/Model/ThreadPredefinedText.md)
 
 
 ## Documentation For Authorization
