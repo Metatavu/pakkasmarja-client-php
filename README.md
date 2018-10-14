@@ -63,15 +63,15 @@ Metatavu\Pakkasmarja\Configuration::getDefaultConfiguration()->setApiKey('Author
 // Metatavu\Pakkasmarja\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new Metatavu\Pakkasmarja\Api\ChatThreadsApi();
-$threadId = 789; // int | thread id
-$predefinedTextId = 789; // int | predefined text id
-$payload = new \Metatavu\Pakkasmarja\Api\Model\ChatThreadPredefinedText(); // \Metatavu\Pakkasmarja\Api\Model\ChatThreadPredefinedText | predefined text
+$threadId = 789; // int | chat thread id
+$type = "type_example"; // string | report type. Accepted values summaryReport
+$accept = "accept_example"; // string | Expected response format. Accepted values application/vnd.openxmlformats for Excel response
 
 try {
-    $result = $api_instance->createThreadPredefinedText($threadId, $predefinedTextId, $payload);
+    $result = $api_instance->getChatThreadReport($threadId, $type, $accept);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ChatThreadsApi->createThreadPredefinedText: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ChatThreadsApi->getChatThreadReport: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -83,10 +83,7 @@ All URIs are relative to *https://localhost/rest/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ChatThreadsApi* | [**createThreadPredefinedText**](docs/Api/ChatThreadsApi.md#createthreadpredefinedtext) | **POST** /chatThreads/{threadId}/predefinedTexts | Creates a predefined text for a thread
-*ChatThreadsApi* | [**findChatThreadPredefinedText**](docs/Api/ChatThreadsApi.md#findchatthreadpredefinedtext) | **GET** /chatThreads/{threadId}/predefinedTexts/{predefinedTextId} | Finds a thread predefined text
-*ChatThreadsApi* | [**listChatThreadPredefinedTexts**](docs/Api/ChatThreadsApi.md#listchatthreadpredefinedtexts) | **GET** /chatThreads/{threadId}/predefinedTexts | List thread&#39;s predefined texts
-*ChatThreadsApi* | [**updateChatThreadPredefinedText**](docs/Api/ChatThreadsApi.md#updatechatthreadpredefinedtext) | **PUT** /chatThreads/{threadId}/predefinedTexts/{predefinedTextId} | Updates a thread&#39;s predefined text
+*ChatThreadsApi* | [**getChatThreadReport**](docs/Api/ChatThreadsApi.md#getchatthreadreport) | **GET** /chatThreads/{threadId}/reports/{type} | Returns chat thread report
 *ContactsApi* | [**findContact**](docs/Api/ContactsApi.md#findcontact) | **GET** /contacts/{id} | Find contact
 *ContactsApi* | [**listContacts**](docs/Api/ContactsApi.md#listcontacts) | **GET** /contacts | Lists contacts
 *ContactsApi* | [**updateContact**](docs/Api/ContactsApi.md#updatecontact) | **PUT** /contacts/{id} | Update contact
@@ -126,8 +123,6 @@ Class | Method | HTTP request | Description
  - [Address](docs/Model/Address.md)
  - [AreaDetail](docs/Model/AreaDetail.md)
  - [BadRequest](docs/Model/BadRequest.md)
- - [ChatThread](docs/Model/ChatThread.md)
- - [ChatThreadPredefinedText](docs/Model/ChatThreadPredefinedText.md)
  - [Contact](docs/Model/Contact.md)
  - [Contract](docs/Model/Contract.md)
  - [ContractDocumentSignRequest](docs/Model/ContractDocumentSignRequest.md)
